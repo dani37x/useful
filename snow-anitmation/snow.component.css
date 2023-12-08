@@ -1,0 +1,53 @@
+.snowflake-small,
+.snowflake,
+.snowflake-big,
+.snowflake-large {
+  object-fit: cover;
+  z-index: 9999;
+  position: fixed;
+  top: -10%;
+}
+
+.snowflake {
+  width: 25px;
+  height: 20px;
+  animation: falling 15s ease-in-out infinite;
+}
+
+.snowflake-small {
+  width: 35px;
+  height: 30px;
+  animation: falling 22s ease-in-out infinite;
+}
+
+.snowflake-big {
+  width: 50px;
+  height: 45px;
+  animation: falling 21s ease-in-out infinite;
+}
+
+.snowflake-large {
+  width: 65px;
+  height: 60px;
+  animation: falling2 18s ease-in-out infinite;
+}
+
+@keyframes falling {
+  0% {
+    transform: translateX(60px) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-100px) rotate(-360deg);
+    top: 110%;
+  }
+}
+
+@keyframes falling2 {
+  0% {
+    transform: translateX(-10px) rotate(0deg);
+  }
+  100% {
+    transform: translateX(100px) rotate(360deg);
+    top: 110%;
+  }
+}
